@@ -1,246 +1,143 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>AgroSpace Xcel | FieldShift</title>
-<meta name="description" content="FieldShift — Adapting Farms with NASA Data. AgroSpace Xcel, five first-year Aerospace Engineering students from Universiti Sains Malaysia.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<meta name="description" content="FieldShift — Adapting farms with NASA data. AgroSpace Xcel, NASA Space Apps Challenge 2026.">
 <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 </head>
 <body>
 
 <header class="nav">
-  <a class="brand" href="#home">
-    <span class="brand-mark">AX</span>
-    <span><strong>AGROSPACE XCEL</strong><small>NASA SPACE APPS CHALLENGE 2026</small></span>
+  <a href="#home" class="brand">
+    <strong>AGROSPACE XCEL</strong>
+    <span>NASA SPACE APPS CHALLENGE 2026</span>
   </a>
   <nav>
     <a href="#home">HOME</a>
     <a href="#team">WHO WE ARE</a>
     <a href="#fieldshift">FIELDSHIFT</a>
-    <a href="#insights">INSIGHTS</a>
     <a href="#method">METHOD</a>
   </nav>
-  <a class="nav-cta" href="#fieldshift">EXPLORE YOUR FIELD ↗</a>
 </header>
 
-<main id="home">
-
-<section class="hero">
-  <div class="hero-bg"></div>
-  <div class="hero-grid"></div>
+<main>
+<section id="home" class="hero">
+  <div class="hero-overlay"></div>
   <div class="hero-content">
     <p class="eyebrow">NASA SPACE APPS CHALLENGE 2026 · FIELD SHIFT</p>
     <h1>From space.<br><span>For the field.</span></h1>
-    <p class="intro">We are <b>AgroSpace Xcel</b> — a team of <b>5 first-year Aerospace Engineering students</b> from <b>Universiti Sains Malaysia (USM)</b>, building FieldShift to turn Earth-observation signals into clearer agricultural decisions.</p>
+    <p class="intro">
+      We are <b>AgroSpace Xcel</b> — a team of <b>5 first-year Aerospace Engineering students</b>
+      from <b>Universiti Sains Malaysia (USM)</b>, building FieldShift to turn Earth-observation
+      signals into clearer agricultural decisions.
+    </p>
     <div class="hero-actions">
-      <a class="button primary" href="#fieldshift">EXPLORE FIELDSHIFT ↗</a>
-      <a class="button text-button" href="#team">MEET THE TEAM ↓</a>
-    </div>
-    <div class="hero-meta">
-      <span>🛰 EARTH OBSERVATION</span>
-      <span>🌱 AGRICULTURAL INTELLIGENCE</span>
-      <span>◉ EXPLAINABLE INSIGHTS</span>
+      <a class="primary-btn" href="#fieldshift">EXPLORE FIELDSHIFT ↗</a>
+      <a class="text-btn" href="#team">MEET THE TEAM ↓</a>
     </div>
   </div>
-  <div class="hero-orbit">
-    <div class="orbit-ring r1"></div>
-    <div class="orbit-ring r2"></div>
-    <div class="earth"></div>
-  </div>
+  <div class="scroll-mark">SCROLL TO EXPLORE</div>
 </section>
 
 <section id="team" class="section team-section">
-  <div class="section-heading">
-    <p class="eyebrow">THE PEOPLE BEHIND FIELDSHIFT</p>
-    <h2>Meet the team.</h2>
-    <p>Five first-year Aerospace Engineering students from USM working together to turn NASA data into practical agricultural insight.</p>
+  <div class="section-head">
+    <div>
+      <p class="eyebrow">THE PEOPLE BEHIND FIELDSHIFT</p>
+      <h2>Meet the team.</h2>
+    </div>
+    <p class="section-copy">Five first-year Aerospace Engineering students from USM working together to make Earth-observation data easier to understand and act on.</p>
   </div>
 
   <div class="team-grid">
-    <button class="member-card" data-member="0">
+    <article class="person">
       <img src="images/joel.jpg" alt="Joel Joseph Lester Sellep">
-      <div><span>TEAM LEADER</span><h3>Joel Joseph Lester Sellep</h3><p>AgroSpace Xcel</p></div>
-    </button>
-    <button class="member-card" data-member="1">
+      <div class="person-info"><span>TEAM LEADER</span><h3>Joel Joseph Lester Sellep</h3><small>AgroSpace Xcel</small></div>
+    </article>
+    <article class="person">
       <img src="images/rafael.jpg" alt="Rafael Dean Richard">
-      <div><span>TEAM MEMBER</span><h3>Rafael Dean Richard</h3><p>AgroSpace Xcel</p></div>
-    </button>
-    <button class="member-card" data-member="2">
+      <div class="person-info"><span>TEAM MEMBER</span><h3>Rafael Dean Richard</h3><small>AgroSpace Xcel</small></div>
+    </article>
+    <article class="person">
       <img src="images/lim-wei-jiun.jpg" alt="Lim Wei Jiun">
-      <div><span>TEAM MEMBER</span><h3>Lim Wei Jiun</h3><p>AgroSpace Xcel</p></div>
-    </button>
-    <button class="member-card" data-member="3">
+      <div class="person-info"><span>TEAM MEMBER</span><h3>Lim Wei Jiun</h3><small>AgroSpace Xcel</small></div>
+    </article>
+    <article class="person">
       <img src="images/rajiv.jpg" alt="Rajiv Akhiilendra A/L Supramaniam">
-      <div><span>TEAM MEMBER</span><h3>Rajiv Akhiilendra A/L Supramaniam</h3><p>AgroSpace Xcel</p></div>
-    </button>
-    <button class="member-card" data-member="4">
+      <div class="person-info"><span>TEAM MEMBER</span><h3>Rajiv Akhiilendra A/L Supramaniam</h3><small>AgroSpace Xcel</small></div>
+    </article>
+    <article class="person">
       <img src="images/ahmad-quisyri.jpg" alt="Ahmad Quisyri Azim Bin Ahmad Zafir">
-      <div><span>TEAM MEMBER</span><h3>Ahmad Quisyri Azim Bin Ahmad Zafir</h3><p>AgroSpace Xcel</p></div>
-    </button>
+      <div class="person-info"><span>TEAM MEMBER</span><h3>Ahmad Quisyri Azim Bin Ahmad Zafir</h3><small>AgroSpace Xcel</small></div>
+    </article>
   </div>
 </section>
 
 <section id="fieldshift" class="section field-section">
-  <div class="section-heading">
-    <p class="eyebrow">01 · FIELDSHIFT</p>
-    <h2>Adapting farms with NASA data.</h2>
-    <p>Select a farming area on the map. The dashboard turns location signals into understandable field indicators and adaptation considerations.</p>
+  <div class="section-head">
+    <div>
+      <p class="eyebrow">FIELDSHIFT</p>
+      <h2>Adapting farms with NASA data.</h2>
+    </div>
+    <p class="section-copy">Search for a place or click the map. FieldShift updates the selected location and generates a location-based demonstration analysis.</p>
+  </div>
+
+  <div class="search-row">
+    <input id="locationSearch" type="text" placeholder="Search a place — e.g. Seoul, South Korea">
+    <button id="searchBtn">SEARCH LOCATION ↗</button>
   </div>
 
   <div class="field-layout">
-    <div class="map-panel">
-      <div id="map"></div>
-      <div class="map-hint">CLICK ANYWHERE ON THE MAP TO SELECT A FIELD</div>
-    </div>
+    <div id="map"></div>
 
-    <aside class="data-panel">
-      <div class="selected-location">
-        <span class="eyebrow">YOUR LOCATION</span>
-        <h3 id="locationName">Sabah</h3>
-        <p id="coords">6.8871° N · 116.8529° E</p>
+    <aside class="analysis-card">
+      <p class="eyebrow">SELECTED FIELD</p>
+      <h3 id="place">USM Engineering Campus</h3>
+      <p id="coords">5.1600, 100.7000</p>
+
+      <button id="run" class="analysis-btn">RUN FIELD ANALYSIS ↗</button>
+
+      <div class="health-row">
+        <div>
+          <span class="mini-label">FIELD HEALTH</span>
+          <div><strong id="score">72</strong><em>/100</em></div>
+        </div>
+        <div class="score-ring" id="ring"><span id="ringText">72</span></div>
       </div>
 
-      <div class="metric-grid">
-        <div class="metric"><span>🌧 RAINFALL</span><b id="rain">2,656 mm</b><small>per year · NASA POWER reference</small></div>
-        <div class="metric"><span>💧 CROP WATER USE</span><b id="water">1,649 mm</b><small>reference evapotranspiration per year</small></div>
-        <div class="metric"><span>🌡 AVG. TEMP</span><b id="temp">27.4 °C</b><small>hottest days reach ~31°C</small></div>
-        <div class="metric"><span>🌱 ROOT-ZONE WETNESS</span><b id="wetness">83%</b><small>0% bone dry · 100% saturated</small></div>
-        <div class="metric"><span>△ ELEVATION</span><b id="elevation">13 m</b><small>NASA SRTM 30 m</small></div>
-        <div class="metric"><span>≋ SLOPE</span><b id="slope">1.8%</b><small>almost flat</small></div>
+      <div class="stats">
+        <div><span>Rainfall</span><b id="rain">Moderate</b></div>
+        <div><span>Water stress</span><b id="water">Moderate</b></div>
+        <div><span>Heat risk</span><b id="heat">High</b></div>
+        <div><span>Vegetation</span><b id="veg">Declining</b></div>
       </div>
 
-      <button id="runAnalysis" class="button primary full">RUN FIELD ANALYSIS ↗</button>
+      <div class="why">
+        <span>WHY?</span>
+        <p id="why">Rainfall is below the local baseline, soil moisture is declining, and surface temperature is elevated.</p>
+      </div>
     </aside>
-  </div>
-
-  <div class="dashboard-card">
-    <div class="dashboard-top">
-      <div>
-        <span class="eyebrow">FIELD HEALTH</span>
-        <div class="health-score"><strong id="health">72</strong><span>/100</span></div>
-      </div>
-      <div class="health-status" id="healthStatus">MODERATELY HEALTHY</div>
-    </div>
-    <div class="progress"><span id="healthBar" style="width:72%"></span></div>
-    <p id="healthText">Overall conditions are moderately healthy. Monitor rainfall and soil moisture.</p>
-
-    <div class="signal-grid">
-      <div><span>🌧 Rainfall</span><strong id="rainSignal">2,656 mm</strong><small>annual reference</small></div>
-      <div><span>💧 Soil moisture</span><strong id="soilSignal">83%</strong><small>root-zone condition</small></div>
-      <div><span>🌡 Land temperature</span><strong id="tempSignal">27.4°C</strong><small>average temperature</small></div>
-      <div><span>🌿 Vegetation</span><strong id="vegSignal">0.72</strong><small>demo vegetation index</small></div>
-    </div>
-
-    <div class="alert-box">
-      <b>WHY THIS ALERT?</b>
-      <p id="alertText">Rainfall, soil moisture and surface temperature are combined to make the field condition easier to understand. These signals suggest a moderate need for monitoring.</p>
-    </div>
-  </div>
-</section>
-
-<section id="insights" class="section light-section">
-  <div class="section-heading">
-    <p class="eyebrow">02 · YOUR YEAR AT A GLANCE</p>
-    <h2>Climate signals over the year.</h2>
-    <p>Average month, 2001–2025. The demo chart follows the patterns shown in the FieldShift prototype.</p>
-  </div>
-
-  <div class="chart-card">
-    <div class="chart-legend"><span class="rain-key">■ Rainfall</span><span class="water-key">● Crop water use</span><span class="temp-key">● Hottest day</span></div>
-    <div class="bars" id="yearChart"></div>
-    <div class="months">Jan&nbsp;&nbsp;&nbsp;&nbsp;Feb&nbsp;&nbsp;&nbsp;&nbsp;Mar&nbsp;&nbsp;&nbsp;&nbsp;Apr&nbsp;&nbsp;&nbsp;&nbsp;May&nbsp;&nbsp;&nbsp;&nbsp;Jun&nbsp;&nbsp;&nbsp;&nbsp;Jul&nbsp;&nbsp;&nbsp;&nbsp;Aug&nbsp;&nbsp;&nbsp;&nbsp;Sep&nbsp;&nbsp;&nbsp;&nbsp;Oct&nbsp;&nbsp;&nbsp;&nbsp;Nov&nbsp;&nbsp;&nbsp;&nbsp;Dec</div>
-  </div>
-
-  <div class="rotation-card">
-    <div class="rotation-header">
-      <div><span class="eyebrow">BEST MATCH FOR YOUR GOALS</span><h3>Paddy → Mung bean → Sunn hemp</h3></div>
-      <strong>72<small>match / 100</small></strong>
-    </div>
-    <div class="season-row"><i class="green"></i><i class="gold"></i><i class="gold"></i><i class="gold"></i><i class="blue"></i><i class="blue"></i><i class="blank"></i><i class="blank"></i><i class="blank"></i><i class="green"></i><i class="green"></i><i class="green"></i></div>
-    <p class="legend-line"><span class="dot green-dot"></span>Paddy rice (Padi) <span class="dot gold-dot"></span>Mung bean (Kacang hijau) <span class="dot blue-dot"></span>Sunn hemp (green manure) <span class="dot blank-dot"></span>Bare</p>
-    <div class="score-lines">
-      <div><span>Soil health</span><b style="width:82%"></b><em>+55</em></div>
-      <div><span>Water saving</span><b style="width:71%"></b><em>+71</em></div>
-      <div><span>Erosion protection</span><b style="width:65%"></b><em>+15</em></div>
-      <div><span>Pest-cycle break</span><b style="width:58%"></b><em>+50</em></div>
-      <div><span>Fits local weather</span><b style="width:100%"></b><em>+9</em></div>
-      <div><span>Income & market</span><b style="width:46%"></b><em>+16</em></div>
-      <div><span>Fits your resources</span><b style="width:80%"></b><em>+55</em></div>
-    </div>
-    <div class="recommendation"><b>Swap the off-season paddy for a short legume in the driest months, then a green manure before the next paddy.</b><p>Strongest on soil health and fits local weather given your priorities.</p><small>About 287 mm/yr of water beyond rainfall · Confidence: Moderate</small></div>
-    <div class="accordion-row">🌱 Benefits <span>6</span><span>⌄</span></div>
-    <div class="accordion-row">📖 What the NASA data shows <span>4</span><span>⌄</span></div>
-    <div class="accordion-row">⚠ Risks to check locally <span>3</span><span>⌄</span></div>
-    <div class="accordion-row">? Information gaps <span>4</span><span>⌄</span></div>
-  </div>
-
-  <div class="alternatives">
-    <article class="alt-card"><span class="eyebrow">ALTERNATIVE</span><h3>Paddy → Groundnut</h3><strong>67 <small>match / 100</small></strong><p>A cash legume on raised beds during the dry spell.</p><div class="mini-score">Soil health <b style="width:62%"></b> +19</div><div class="mini-score">Water saving <b style="width:68%"></b> +68</div><div class="mini-score">Pest-cycle break <b style="width:60%"></b> +60</div></article>
-    <article class="alt-card"><span class="eyebrow">ALTERNATIVE</span><h3>Paddy → Grain corn</h3><strong>52 <small>match / 100</small></strong><p>Off-season grain corn for feed-mill contracts.</p><div class="mini-score">Soil health <b style="width:36%"></b> +6</div><div class="mini-score">Water saving <b style="width:64%"></b> +64</div><div class="mini-score">Fits resources <b style="width:82%"></b> +55</div></article>
-  </div>
-</section>
-
-<section id="trends" class="section">
-  <div class="section-heading">
-    <p class="eyebrow">LONG-TERM TRENDS</p>
-    <h2>What is changing over time?</h2>
-    <p>Yearly values 2001–2025. Trends are straight-line estimates — useful for direction, not exact forecasts.</p>
-  </div>
-  <div class="trend-grid">
-    <div class="trend-card"><h3>Yearly rainfall <span>↘ −299 mm / decade</span></h3><div class="spark rain-spark"></div></div>
-    <div class="trend-card"><h3>Average temperature <span>↗ +0.30°C / decade</span></h3><div class="spark temp-spark"></div></div>
-    <div class="trend-card"><h3>Hottest day of year <span>↗ +0.63°C / decade</span></h3><div class="spark hot-spark"></div></div>
-    <div class="trend-card"><h3>Root-zone soil wetness <span>↘ −3.3% / decade</span></h3><div class="spark soil-spark"></div></div>
   </div>
 </section>
 
 <section id="method" class="section method-section">
-  <div class="section-heading">
-    <p class="eyebrow">03 · METHOD</p>
-    <h2>Observe. Understand. Adapt.</h2>
-    <p>FieldShift is designed around an explainable workflow so a farmer sees not only a risk level, but the environmental signals behind it.</p>
-  </div>
-  <div class="steps">
-    <article><b>01 · SELECT</b><h3>Choose a field</h3><p>Pick or click a farming area through the interactive map.</p></article>
-    <article><b>02 · OBSERVE</b><h3>Bring together signals</h3><p>Rainfall, soil moisture, land-surface temperature and vegetation condition are the core signals.</p></article>
-    <article><b>03 · ANALYZE</b><h3>Detect change</h3><p>Compare indicators to identify water, heat and vegetation stress.</p></article>
-    <article><b>04 · ADAPT</b><h3>Support decisions</h3><p>Present an explanation and practical monitoring or adaptation considerations.</p></article>
-  </div>
-
-  <div class="info-callout">
-    <b>IMPORTANT</b>
-    <p>Scores combine NASA observations with general crop knowledge. They point to <strong>possibilities, not instructions</strong>. Local soil tests, pests, drainage, prices and extension advice still matter because satellites cannot see everything on the ground.</p>
+  <p class="eyebrow">METHOD</p>
+  <h2>From observation to action.</h2>
+  <div class="method-grid">
+    <div><span>01</span><h3>Locate</h3><p>Select a farming area on the interactive map.</p></div>
+    <div><span>02</span><h3>Observe</h3><p>Bring together environmental signals from Earth observation.</p></div>
+    <div><span>03</span><h3>Explain</h3><p>Translate signals into understandable field indicators.</p></div>
+    <div><span>04</span><h3>Adapt</h3><p>Turn the detected conditions into practical monitoring guidance.</p></div>
   </div>
 </section>
-
-<section class="final-cta">
-  <p class="eyebrow">AGROSPACE XCEL · USM</p>
-  <h2>From Space Data to Farm Action.</h2>
-  <p>FieldShift — helping farms prepare for an unpredictable climate through accessible Earth-observation intelligence.</p>
-  <a class="button primary" href="#fieldshift">TRY THE DEMO →</a>
-</section>
-
 </main>
 
 <footer>
-  <div>AGROSPACE XCEL · UNIVERSITI SAINS MALAYSIA</div>
-  <div>FIELD SHIFT: ADAPTING FARMS WITH NASA DATA</div>
-  <div>NASA SPACE APPS CHALLENGE 2026</div>
+  <div><strong>AGROSPACE XCEL</strong><span>FIELD SHIFT · NASA SPACE APPS CHALLENGE 2026</span></div>
+  <span>FROM SPACE. FOR THE FIELD.</span>
 </footer>
-
-<div class="modal" id="teamModal" aria-hidden="true">
-  <div class="modal-backdrop"></div>
-  <div class="modal-card">
-    <button class="modal-close" aria-label="Close">×</button>
-    <img id="modalPhoto" src="" alt="">
-    <div><span id="modalRole" class="eyebrow"></span><h2 id="modalName"></h2><p id="modalDescription">AgroSpace Xcel · NASA Space Apps Challenge 2026</p></div>
-  </div>
-</div>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script src="script.js"></script>
