@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AgroSpace Xcel | FieldShift</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+</head>
+<body>
+<header class="nav">
+  <a href="#home" class="brand"><b>AGROSPACE XCEL</b><small>NASA SPACE APPS CHALLENGE 2026</small></a>
+  <nav><a href="#home">HOME</a><a href="#team">WHO WE ARE</a><a href="#fieldshift">FIELDSHIFT</a><a href="#method">METHOD</a></nav>
+</header>
+
+<section id="home" class="hero">
+  <div class="heroShade"></div>
+  <div class="heroText">
+    <div class="eyebrow">NASA SPACE APPS CHALLENGE 2026 · FIELD SHIFT</div>
+    <h1>From space.<br><span>For the field.</span></h1>
+    <p>We are <b>AgroSpace Xcel</b>, five first-year Aerospace Engineering students from Universiti Sains Malaysia (USM), building FieldShift to turn Earth-observation signals into understandable agricultural insight.</p>
+    <div class="actions"><a class="button" href="#fieldshift">EXPLORE FIELDSHIFT ↗</a><a href="#team">MEET THE TEAM ↓</a></div>
+  </div>
+</section>
+
+<section id="team" class="section team">
+  <div class="heading"><div class="eyebrow">THE PEOPLE BEHIND FIELDSHIFT</div><h2>Meet the team.</h2><p>Five first-year Aerospace Engineering students from USM working together to turn NASA data into practical agricultural insight.</p></div>
+  <div class="teamGrid">
+    <article><img src="images/joel.jpg" alt="Joel Joseph Lester Sellep"><div><span>TEAM LEADER</span><h3>Joel Joseph Lester Sellep</h3><small>AgroSpace Xcel</small></div></article>
+    <article><img src="images/rafael.jpg" alt="Rafael Dean Richard"><div><span>TEAM MEMBER</span><h3>Rafael Dean Richard</h3><small>AgroSpace Xcel</small></div></article>
+    <article><img src="images/lim-wei-jiun.jpg" alt="Lim Wei Jiun"><div><span>TEAM MEMBER</span><h3>Lim Wei Jiun</h3><small>AgroSpace Xcel</small></div></article>
+    <article><img src="images/rajiv.jpg" alt="Rajiv Akhiilendra A/L Supramaniam"><div><span>TEAM MEMBER</span><h3>Rajiv Akhiilendra A/L Supramaniam</h3><small>AgroSpace Xcel</small></div></article>
+    <article><img src="images/ahmad-quisyri.jpg" alt="Ahmad Quisyri Azim Bin Ahmad Zafir"><div><span>TEAM MEMBER</span><h3>Ahmad Quisyri Azim Bin Ahmad Zafir</h3><small>AgroSpace Xcel</small></div></article>
+  </div>
+</section>
+
+<section id="fieldshift" class="section field">
+  <div class="heading"><div class="eyebrow">FIELDSHIFT</div><h2>Adapting farms with NASA data.</h2><p>Click anywhere on the map. The selected place, coordinates and demonstration field analysis will update automatically.</p></div>
+  <div class="fieldLayout">
+    <div id="map"></div>
+    <aside>
+      <div class="eyebrow">SELECTED FIELD</div>
+      <h3 id="place">Loading location…</h3>
+      <p id="coords">—</p>
+      <button id="run">RUN FIELD ANALYSIS ↗</button>
+      <div class="health"><div><small>FIELD HEALTH</small><strong id="score">—</strong><em>/100</em></div><div class="ring" id="ring">—</div></div>
+      <div class="stats">
+        <p><span>Rainfall</span><b id="rain">—</b></p>
+        <p><span>Water stress</span><b id="water">—</b></p>
+        <p><span>Heat risk</span><b id="heat">—</b></p>
+        <p><span>Vegetation</span><b id="veg">—</b></p>
+      </div>
+      <div class="why"><small>WHY?</small><p id="why">Select a field to generate an explainable analysis.</p></div>
+    </aside>
+  </div>
+</section>
+
+<section id="method" class="section method">
+  <div class="eyebrow">METHOD</div><h2>From observation to action.</h2>
+  <div class="steps"><div><b>01</b><h3>Locate</h3><p>Select a farming area on the interactive map.</p></div><div><b>02</b><h3>Observe</h3><p>Bring together environmental signals.</p></div><div><b>03</b><h3>Explain</h3><p>Translate signals into understandable indicators.</p></div><div><b>04</b><h3>Adapt</h3><p>Support practical monitoring and adaptation.</p></div></div>
+</section>
+<footer>AGROSPACE XCEL · NASA SPACE APPS CHALLENGE 2026 · FIELDSHIFT</footer>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
