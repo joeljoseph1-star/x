@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AgroSpace Xcel | FieldShift</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="#home">
+    <div class="brand-mark">AX</div>
+    <div><div class="brand-name">AGROSPACE XCEL</div><div class="brand-sub">NASA SPACE APPS CHALLENGE 2026</div></div>
+  </a>
+  <nav>
+    <a href="#home">HOME</a>
+    <a href="#team">WHO WE ARE</a>
+    <a href="#fieldshift">FIELDSHIFT</a>
+    <a href="#method">METHOD</a>
+  </nav>
+</header>
+
+<main>
+<section id="home" class="hero">
+  <div class="hero-overlay"></div>
+  <div class="hero-copy">
+    <div class="eyebrow">FIELD SHIFT · ADAPTING FARMS WITH NASA DATA</div>
+    <h1>From space.<br><span>For the field.</span></h1>
+    <p>We are <strong>AgroSpace Xcel</strong> — five first-year Aerospace Engineering students from Universiti Sains Malaysia (USM), building FieldShift to turn Earth-observation signals into clearer agricultural decisions.</p>
+    <div class="hero-actions">
+      <a class="button primary" href="#fieldshift">EXPLORE FIELDSHIFT ↗</a>
+      <a class="button ghost" href="#team">MEET THE TEAM ↓</a>
+    </div>
+  </div>
+  <div class="hero-panel">
+    <div class="panel-label">EARTH OBSERVATION</div>
+    <div class="hero-stat"><span>01</span><b>LOCATION</b><small>Choose a field anywhere on Earth</small></div>
+    <div class="hero-stat"><span>02</span><b>ENVIRONMENT</b><small>Read rainfall, temperature & field indicators</small></div>
+    <div class="hero-stat"><span>03</span><b>ADAPTATION</b><small>Turn signals into understandable action</small></div>
+  </div>
+</section>
+
+<section class="mission-strip">
+  <div><strong>01</strong><span>SELECT A FIELD</span></div>
+  <div><strong>02</strong><span>READ EARTH SIGNALS</span></div>
+  <div><strong>03</strong><span>UNDERSTAND RISK</span></div>
+  <div><strong>04</strong><span>ADAPT WITH INSIGHT</span></div>
+</section>
+
+<section id="team" class="section team-section">
+  <div class="section-heading">
+    <div><div class="eyebrow">WHO WE ARE</div><h2>Meet the team.</h2></div>
+    <p>Five first-year Aerospace Engineering students from Universiti Sains Malaysia, building a bridge between space technology and agriculture.</p>
+  </div>
+  <div class="team-grid">
+    <article class="member leader"><img src="images/joel.jpg" alt="Joel Joseph Lester Sellep"><div class="member-info"><small>TEAM LEADER</small><h3>Joel Joseph Lester Sellep</h3><p>AgroSpace Xcel</p></div></article>
+    <article class="member"><img src="images/rafael.jpg" alt="Rafael Dean Richard"><div class="member-info"><small>TEAM MEMBER</small><h3>Rafael Dean Richard</h3><p>AgroSpace Xcel</p></div></article>
+    <article class="member"><img src="images/lim-wei-jiun.jpg" alt="Lim Wei Jiun"><div class="member-info"><small>TEAM MEMBER</small><h3>Lim Wei Jiun</h3><p>AgroSpace Xcel</p></div></article>
+    <article class="member"><img src="images/rajiv.jpg" alt="Rajiv Akhiilendra A/L Supramaniam"><div class="member-info"><small>TEAM MEMBER</small><h3>Rajiv Akhiilendra A/L Supramaniam</h3><p>AgroSpace Xcel</p></div></article>
+    <article class="member"><img src="images/ahmad-quisyri.jpg" alt="Ahmad Quisyri Azim Bin Ahmad Zafir"><div class="member-info"><small>TEAM MEMBER</small><h3>Ahmad Quisyri Azim Bin Ahmad Zafir</h3><p>AgroSpace Xcel</p></div></article>
+  </div>
+</section>
+
+<section id="fieldshift" class="section field-section">
+  <div class="section-heading compact">
+    <div><div class="eyebrow">FIELDSHIFT</div><h2>Explore your field.</h2></div>
+    <p>Search a city or click the satellite map. The location and analysis update for the selected point.</p>
+  </div>
+
+  <div class="search-row">
+    <input id="locationSearch" type="text" placeholder="Search city, farm or region — e.g. Seoul, South Korea">
+    <button id="searchButton" class="button primary">SEARCH</button>
+    <button id="centerButton" class="button ghost dark">USE MAP CENTER</button>
+  </div>
+
+  <div class="field-layout">
+    <div id="map"></div>
+    <aside class="analysis-card">
+      <div class="card-kicker">SELECTED FIELD</div>
+      <h3 id="placeName">Kudat, Malaysia</h3>
+      <div class="coords" id="coords">6.8833° N · 116.8333° E</div>
+      <div id="dataStatus" class="data-status">Prototype location analysis ready</div>
+      <button id="runAnalysis" class="analysis-button">RUN FIELD ANALYSIS ↗</button>
+
+      <div class="health">
+        <div><span>FIELD HEALTH</span><strong id="healthScore">72</strong><em>/100</em></div>
+        <div class="health-ring" id="healthRing"><span id="healthRingText">72</span></div>
+      </div>
+
+      <div class="metrics">
+        <div><span>Rainfall</span><b id="rainfall">—</b><small id="rainfallSub">location estimate</small></div>
+        <div><span>Avg. temperature</span><b id="temperature">—</b><small>annual climate estimate</small></div>
+        <div><span>Water stress</span><b id="waterStress">—</b><small>derived indicator</small></div>
+        <div><span>Heat risk</span><b id="heatRisk">—</b><small>derived indicator</small></div>
+        <div><span>Vegetation</span><b id="vegetation">—</b><small>derived indicator</small></div>
+        <div><span>Field type</span><b id="fieldType">Agricultural</b><small>prototype classification</small></div>
+      </div>
+
+      <div class="why"><span>WHY THIS MATTERS</span><p id="whyText">Select a location to see an explainable field assessment.</p></div>
+      <div class="source-note">Data note: this prototype uses location-based environmental estimates for demonstration. Connect verified NASA datasets/API outputs before treating values as operational agricultural advice.</div>
+    </aside>
+  </div>
+</section>
+
+<section class="decision-section">
+  <div class="section-heading compact">
+    <div><div class="eyebrow">FIELDSHIFT REFERENCE</div><h2>Decision views.</h2></div>
+    <p>Visual reference panels for the information architecture of FieldShift.</p>
+  </div>
+  <div class="decision-grid">
+    <div class="decision-card big"><img src="images/space-view.jpeg" alt="Satellite view of Earth at night"><div><span>01</span><h3>Location & environmental indicators</h3></div></div>
+    <div class="decision-card"><div class="mock-chart"><div class="bars"><i></i><i></i><i></i><i></i><i></i></div></div><div><span>02</span><h3>Rainfall & crop water context</h3></div></div>
+    <div class="decision-card"><div class="mock-map"><span>●</span><span>◦</span><span>◦</span></div><div><span>03</span><h3>Alternative crop comparison</h3></div></div>
+    <div class="decision-card"><div class="mock-risk"><b>82</b><small>FIELD HEALTH</small></div><div><span>04</span><h3>Best-match adaptation view</h3></div></div>
+  </div>
+</section>
+
+<section id="method" class="section method-section">
+  <div class="section-heading">
+    <div><div class="eyebrow">METHOD</div><h2>Signals into<br><span>decisions.</span></h2></div>
+    <p>FieldShift is designed as an explainable layer between Earth-observation data and practical agricultural adaptation.</p>
+  </div>
+  <div class="method-grid">
+    <div><b>01</b><h3>Earth observation</h3><p>Use environmental signals such as rainfall, temperature, soil moisture and vegetation condition.</p></div>
+    <div><b>02</b><h3>Field analysis</h3><p>Combine location and environmental indicators into an easy-to-read field health score.</p></div>
+    <div><b>03</b><h3>Explainable alerts</h3><p>Show why a condition is flagged instead of presenting a risk label without context.</p></div>
+    <div><b>04</b><h3>Adaptation guidance</h3><p>Translate observed conditions into practical monitoring and adaptation actions.</p></div>
+  </div>
+</section>
+</main>
+
+<footer><div>AGROSPACE XCEL</div><div>NASA SPACE APPS CHALLENGE 2026 · FIELDSHIFT</div></footer>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+<script src="script.js"></script>
+</body>
+</html>
